@@ -812,8 +812,8 @@ section{position:relative}
       <div class="sobre-txt">
         <div class="reveal">
           <p class="olho bordo">Sobre mim</p>
-          <h2>Prazer, Beatriz <em>Luiza.</em></h2>
-          <p>Sou nutricionista formada pela UniFOA e atendo on-line pessoas de todo o Brasil. Meu trabalho é ajudar você a ressignificar a sua relação com a comida, com ciência e com um plano que respeita a sua vida real.</p>
+          <h2>Prazer, Beatriz <em>Nogueira.</em></h2>
+          <p>Neste modelo demonstrativo, apresento uma proposta de acompanhamento nutricional on-line, com atenção à rotina e à relação com a comida.</p>
           <p>Comida é parte do encontro, da festa e do domingo em família. Ela entra no plano junto com você.</p>
         </div>
         <blockquote class="citacao reveal">“Nutrição é ciência, não opinião.”</blockquote>
@@ -861,7 +861,7 @@ section{position:relative}
       <div class="cab-secao reveal">
         <p class="olho">@nutri.demo</p>
         <h2>Tem mais de mim no <em>Instagram.</em></h2>
-        <p class="intro">Mais de 13 mil pessoas acompanham por lá as dicas, a rotina e as perguntas que eu respondo.</p>
+        <p class="intro">Explore exemplos ilustrativos de temas sobre alimentação, rotina e bem-estar.</p>
       </div>
     </div>
     <div class="faixa" id="faixa">
@@ -957,15 +957,15 @@ const MSG = {
 };
 const PERGUNTAS = [{"q": "Nunca fui em nutricionista. Como é a primeira consulta?", "r": "É uma conversa por vídeo, de 40 min a 1h30. Eu quero entender a sua rotina, os seus horários, o que você gosta de comer e o seu histórico. Ninguém vai te julgar pelo que tem no seu prato."}, {"q": "Vou ter que cortar tudo que eu gosto?", "r": "Não. O que você gosta entra no plano. Quando a comida vira proibida, a vontade só cresce."}, {"q": "Moro longe. Dá certo on-line?", "r": "Dá. Você pode estar em qualquer cidade do Brasil. O plano fica no app e as dúvidas a gente resolve pelo WhatsApp."}, {"q": "Minha rotina é muito corrida.", "r": "Então o plano vai ser pensado para ela: marmita, lanche de bolsa, delivery. Receita que leva duas horas fica de fora."}, {"q": "E se eu sair da dieta no fim de semana?", "r": "Acontece com todo mundo. Você me conta e a gente ajusta. Um fim de semana não apaga a semana inteira."}];
 const POSTS = [
-  ['ig-nao-gosto-de-jantar','Post: Nutri, mas eu não gosto de jantar'],
-  ['ig-refeicao-sem-proteina','Post: é normal fazer uma refeição sem pensar nas proteínas'],
-  ['ig-abobora','Post: como cozinhar abóbora de um jeito rápido e prático'],
-  ['ig-como-pouco','Post: Nutri, eu como pouco e não emagreço'],
-  ['ig-felicidade-magra','Post: a felicidade é magra?'],
-  ['ig-mais-proteina','Post: você deveria comer mais proteína'],
-  ['ig-me-alimento-mal','Post: Nutri, me alimento muito mal, tem algo pra substituir isso?'],
-  ['ig-aspectos-sem-ser-comida','Post: aspectos sem ser comida que o nutricionista deve considerar'],
-  ['ig-dieta-flexivel','Post: nem todo dia você poderá ser flexível na dieta']
+  ["meal-vegetable", "Prato com vegetais à mesa; fotografia ilustrativa."],
+  ["meal-rice", "Arroz, feijão e vegetais em um prato; fotografia ilustrativa."],
+  ["pumpkin", "Preparo de abóbora para cozinhar; fotografia ilustrativa."],
+  ["meal-box", "Marmita com alimentos variados; fotografia ilustrativa."],
+  ["meal-sharing", "Pessoas compartilham uma refeição; fotografia ilustrativa."],
+  ["meal-eggs", "Prato com ovo e vegetais; fotografia ilustrativa."],
+  ["meal-prep", "Preparo de alimentos frescos; fotografia ilustrativa."],
+  ["diet-plan", "Planejamento alimentar em uma mesa; fotografia ilustrativa."],
+  ["food-variety", "Mesa com vegetais e saladas; fotografia ilustrativa."]
 ];
 
 document.querySelectorAll('[data-wa]').forEach(a => {
@@ -992,7 +992,7 @@ document.querySelectorAll('[data-credito]').forEach(a => { a.href = CLIENTE.cred
 const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.querySelectorAll('[data-trilho]').forEach((t, k) => {
   const lista = k ? [...POSTS].reverse() : POSTS;
-  const html = lista.map(([f, alt]) => `<a href="${CLIENTE.instagram}" target="_blank" rel="noopener"><img src="/modelo-profissional-5/assets/beatriz-recorte.png" alt="${alt}" width="480" height="600" loading="lazy"></a>`).join('');
+  const html = lista.map(([f, alt]) => `<a href="${CLIENTE.instagram}" target="_blank" rel="noopener"><img src="/modelo-profissional-5/assets/ilustracoes/${f}.jpg" alt="${alt}" width="480" height="600" loading="lazy"></a>`).join('');
   t.innerHTML = html + (reduz ? '' : html.replace(/alt="[^"]*"/g, 'alt=""').replace(/<a /g, '<a tabindex="-1" aria-hidden="true" '));
 });
 const faixa = document.getElementById('faixa'), pausa = document.getElementById('pausa');
@@ -1447,5 +1447,5 @@ document.querySelectorAll('main > section[id]').forEach(el => ioRot.observe(el))
 addEventListener('scroll', atualizaFlutua, { passive: true });
 document.querySelectorAll('main [data-wa]:not(#j-fim [data-wa]), .rodape [data-wa]').forEach(a => ioWa.observe(a));
 </script>
-<dialog id="demo-modal" aria-labelledby="demo-title"><h2 id="demo-title">Contato demonstrativo</h2><p>Este é um modelo de portfólio. Nenhuma informação será enviada.</p><button type="button" id="demo-close">Entendi</button></dialog><div class="demo-label">Modelo demonstrativo · Profissional e informações fictícias · <a href="https://site-guara-agency.guaraagency.workers.dev/portfolio/">Guará Agency</a></div><script src="/modelo-profissional-5/assets/demo.js" defer></script></body>
+<dialog id="demo-modal" aria-labelledby="demo-title"><h2 id="demo-title">Contato demonstrativo</h2><p>Este é um modelo de portfólio. Nenhuma informação será enviada.</p><button type="button" id="demo-close">Entendi</button></dialog><div class="demo-label">Modelo demonstrativo · Fotos ilustrativas não representam profissionais, locais ou resultados reais · <a href="https://site-guara-agency.guaraagency.workers.dev/portfolio/">Guará Agency</a></div><script src="/modelo-profissional-5/assets/demo.js" defer></script></body>
 </html>
